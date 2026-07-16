@@ -30,6 +30,12 @@ Déposez vos fichiers dans `/assets` avec ces noms exacts :
 | `logo-424.png` | Partenaires |
 | `video-annonce.mp4` | Galerie (vidéo) |
 | `video-teaser.mp4` | Galerie (vidéo) |
+| `artiste-madii-madii.jpg` | Carte artiste (carré, ex. 600×600) |
+| `artiste-lea-churros.jpg` | Carte artiste |
+| `artiste-anthony-gussie.jpg` | Carte artiste |
+| `artiste-speaker.jpg` | Carte artiste |
+| `artiste-deejay-patrice.jpg` | Carte artiste |
+| `artiste-dany-malli.jpg` | Carte artiste |
 
 ➡️ **Si un fichier est absent, le site affiche automatiquement un placeholder propre et cohérent avec la DA.** Rien ne casse.
 
@@ -60,7 +66,7 @@ Toute la DA est pilotée par les variables CSS en tête de `style.css` :
 --fumee: #5fb6dc;     /* bleu fumée */
 ```
 
-- **Photos artistes** : dans chaque `.artist-card__visual`, décommentez la balise `<img>` et pointez vers votre fichier.
+- **Photos artistes** : déposez simplement les fichiers `artiste-*.jpg` dans `/assets` (noms exacts ci-dessus). Sans photo, la carte affiche l'initiale dorée de l'artiste.
 - **Countdown** : la date cible est dans `script.js` (`TARGET`), réglée sur le 12/09/2026 18h30 heure Réunion (UTC+4).
 - **Partenaires** : dupliquez un bloc `.partner` pour ajouter un logo.
 

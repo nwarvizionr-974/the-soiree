@@ -1,1 +1,24 @@
-Déposez ici : affiche-the-soiree.jpg, programme-the-soiree.jpg, logo-djbix.png, logo-424.png, video-annonce.mp4, video-teaser.mp4 (voir README.md)
+Déposez ici vos médias avec ces noms exacts :
+
+AFFICHE & VISUELS
+- affiche-the-soiree.jpg
+- programme-the-soiree.jpg
+
+PHOTOS ARTISTES (format carré conseillé, ex. 600x600, JPG)
+- artiste-madii-madii.jpg
+- artiste-lea-churros.jpg
+- artiste-anthony-gussie.jpg
+- artiste-speaker.jpg
+- artiste-deejay-patrice.jpg
+- artiste-dany-malli.jpg
+
+LOGOS
+- logo-djbix.png
+- logo-424.png
+
+VIDÉOS
+- video-annonce.mp4
+- video-teaser.mp4
+
+Si un fichier est absent, le site affiche automatiquement un placeholder
+(initiale dorée pour les artistes). Rien ne casse.
