@@ -599,6 +599,61 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 .partner.is-placeholder .partner__fallback { display: block; }
 
+/* ---------- 16b. DEVENIR PARTENAIRE / SPONSOR ---------- */
+.sponsor {
+  position: relative; overflow: hidden;
+  margin-top: 3.5rem; text-align: center;
+  background:
+    linear-gradient(140deg, rgba(163, 18, 43, .16), rgba(30, 13, 18, .6) 45%, rgba(95, 182, 220, .07)),
+    var(--noir-2);
+  border: var(--border-gold);
+  border-radius: var(--radius);
+  padding: clamp(2.4rem, 6vw, 4rem) clamp(1.4rem, 5vw, 3.5rem);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .5);
+}
+.sponsor__glow {
+  position: absolute; top: -60%; left: 50%; transform: translateX(-50%);
+  width: 70%; height: 100%; border-radius: 50%;
+  background: radial-gradient(circle, rgba(211, 166, 75, .16), transparent 65%);
+  pointer-events: none;
+}
+.sponsor__eyebrow {
+  font-size: .72rem; letter-spacing: .34em; text-transform: uppercase;
+  color: var(--fumee); margin-bottom: .7rem;
+}
+.sponsor__title {
+  font-family: var(--font-serif); font-weight: 600;
+  font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 1rem;
+}
+.sponsor__title em {
+  font-family: var(--font-script); font-style: normal; font-weight: 400;
+  color: var(--or); font-size: 1.2em;
+  text-shadow: 0 0 26px rgba(211, 166, 75, .4);
+}
+.sponsor__text { max-width: 620px; margin: 0 auto 2rem; opacity: .88; }
+.sponsor__benefits {
+  list-style: none; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; margin-bottom: 2.2rem; text-align: center;
+}
+.sponsor__benefits li {
+  background: rgba(246, 239, 226, .04);
+  border: 1px solid rgba(246, 239, 226, .1);
+  border-radius: var(--radius);
+  padding: 1.2rem 1rem;
+  display: flex; flex-direction: column; gap: .35rem;
+  transition: border-color .3s ease, transform .3s ease;
+}
+.sponsor__benefits li:hover { border-color: rgba(211, 166, 75, .5); transform: translateY(-3px); }
+.sponsor__benefit-title {
+  font-family: var(--font-serif); font-weight: 700; font-size: 1.15rem;
+  color: var(--or-clair); letter-spacing: .06em; text-transform: uppercase;
+}
+.sponsor__benefit-text { font-size: .88rem; opacity: .8; line-height: 1.5; }
+.sponsor__actions { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.sponsor__note { margin-top: 1.2rem; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; opacity: .55; }
+
 /* ---------- 17. FAQ ---------- */
 .faq__list { display: flex; flex-direction: column; gap: .9rem; }
 .faq__item {

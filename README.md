@@ -77,6 +77,7 @@ Toute la DA est pilotée par les variables CSS en tête de `style.css` :
 - Particules dorées & bleues, halos de fumée animés, parallax, tilt 3D de l'affiche
 - Reveal au scroll, FAQ accordéon, CTA sticky mobile
 - Boutons Appel / WhatsApp / Google Maps
+- Bloc « Devenir partenaire » (sponsors) avec WhatsApp pré-rempli — le message se modifie dans le lien `wa.me` de `index.html` (section `#devenir-partenaire`)
 - Version imprimable des infos pratiques (bouton « Imprimer les infos »)
 - SEO de base + Open Graph + favicon
 - Responsive mobile-first, `prefers-reduced-motion` respecté
