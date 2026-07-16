@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===================== SEO ===================== -->
+  <title>THE SOIRÉE — Dîner dansant & Showcase | Samedi 12 septembre 2026 — Piton Saint-Leu</title>
+  <meta name="description" content="THE SOIRÉE, la soirée du boss par DJ BIX. Dîner dansant & showcase le samedi 12 septembre 2026 dès 18h30, Salle Foirail — Piton Saint-Leu. Événement complet.">
+  <meta name="theme-color" content="#0b0507">
+  <link rel="canonical" href="https://VOTRE-UTILISATEUR.github.io/the-soiree/">
+
+  <!-- ===================== OPEN GRAPH (Facebook) ===================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="THE SOIRÉE — Dîner dansant & Showcase">
+  <meta property="og:description" content="La soirée du boss par DJ BIX. Samedi 12 septembre 2026 dès 18h30 — Salle Foirail, Piton Saint-Leu. COMPLET.">
+  <meta property="og:image" content="assets/affiche-the-soiree.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===================== FAVICON (placeholder SVG inline) ===================== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0507'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='%23d3a64b' font-family='Georgia,serif' font-style='italic'%3ES%3C/text%3E%3C/svg%3E">
+
+  <!-- ===================== FONTS (Google Fonts + fallback système) ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__script">The Soirée</span>
+      <span class="loader__line"></span>
+      <span class="loader__sub">La soirée du boss</span>
+    </div>
+  </div>
+
+  <!-- ===================== FOND PARTICULES ===================== -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#hero">The <em>Soirée</em></a>
+    <nav class="nav__links" aria-label="Navigation principale">
+      <a href="#artistes">Artistes</a>
+      <a href="#programme">Programme</a>
+      <a href="#menu">Menu</a>
+      <a href="#infos">Infos</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__cta" href="tel:+262692287081">0692 287 081</a>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__smoke hero__smoke--red" data-parallax="0.25" aria-hidden="true"></div>
+      <div class="hero__smoke hero__smoke--blue" data-parallax="0.4" aria-hidden="true"></div>
+      <div class="hero__smoke hero__smoke--gold" data-parallax="0.15" aria-hidden="true"></div>
+
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">DJ BIX présente · avec l'équipe The Connection 424</p>
+          <h1 class="hero__title">
+            <span class="hero__script reveal">The Soirée</span>
+            <span class="hero__signature reveal">— La soirée du boss —</span>
+          </h1>
+          <p class="hero__type reveal">Dîner dansant <span class="dot">•</span> Showcase</p>
+
+          <div class="hero__meta reveal">
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Date</span>
+              <span class="hero__meta-value">Samedi 12 septembre 2026</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Heure</span>
+              <span class="hero__meta-value">dès 18h30</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Lieu</span>
+              <span class="hero__meta-value">Salle Foirail — Piton Saint-Leu</span>
+            </div>
+          </div>
+
+          <!-- Compte à rebours -->
+          <div class="countdown reveal" id="countdown" aria-label="Compte à rebours avant l'événement">
+            <div class="countdown__unit"><span id="cd-days">--</span><small>jours</small></div>
+            <div class="countdown__unit"><span id="cd-hours">--</span><small>heures</small></div>
+            <div class="countdown__unit"><span id="cd-mins">--</span><small>min</small></div>
+            <div class="countdown__unit"><span id="cd-secs">--</span><small>sec</small></div>
+          </div>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--gold" href="#programme">Voir le programme</a>
+            <a class="btn btn--ghost" href="tel:+262692287081">Appeler · 0692 287 081</a>
+          </div>
+        </div>
+
+        <!-- Affiche officielle en carte 3D -->
+        <div class="hero__poster reveal" id="poster3d">
+          <div class="poster-card" id="posterCard">
+            <img src="assets/affiche-the-soiree.jpg" alt="Affiche officielle de THE SOIRÉE"
+                 onerror="this.closest('.poster-card').classList.add('is-placeholder'); this.remove();">
+            <div class="poster-card__fallback" aria-hidden="true">
+              <span class="poster-card__script">The Soirée</span>
+              <span class="poster-card__line"></span>
+              <span class="poster-card__txt">Affiche officielle</span>
+              <span class="poster-card__file">assets/affiche-the-soiree.jpg</span>
+            </div>
+            <span class="poster-card__stamp" aria-hidden="true">Sold&nbsp;Out</span>
+            <div class="poster-card__shine" aria-hidden="true"></div>
+          </div>
+          <span class="badge-soldout">Complet · Sold out</span>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#soldout" aria-label="Faire défiler vers le bas"><span></span></a>
+    </section>
+
+    <!-- ===================== 2. BANDEAU SOLD OUT ===================== -->
+    <section class="soldout" id="soldout">
+      <div class="soldout__marquee" aria-hidden="true">
+        <div class="soldout__track">
+          <span>Sold out</span><span>•</span><span>Complet</span><span>•</span>
+          <span>Sold out</span><span>•</span><span>Complet</span><span>•</span>
+          <span>Sold out</span><span>•</span><span>Complet</span><span>•</span>
+          <span>Sold out</span><span>•</span><span>Complet</span><span>•</span>
+        </div>
+      </div>
+      <div class="soldout__body reveal">
+        <h2 class="soldout__title">THE SOIRÉE affiche complet</h2>
+        <p class="soldout__text">Tous les billets disponibles ont été vendus.<br>Merci pour votre engouement.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 3. PRÉSENTATION ===================== -->
+    <section class="section presentation" id="presentation">
+      <div class="section__inner section__inner--narrow reveal">
+        <p class="section__eyebrow">L'événement</p>
+        <h2 class="section__title">Une soirée, <em>un moment de scène</em></h2>
+        <p class="presentation__text">
+          The Soirée est un dîner dansant &amp; showcase imaginé par <strong>DJ BIX</strong> avec l'équipe
+          <strong>The Connection 424</strong>. Une soirée pensée pour rassembler autour de la musique,
+          de l'ambiance, du partage et d'un moment de scène fort à Piton Saint-Leu.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. ARTISTES ===================== -->
+    <section class="section artistes" id="artistes">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Sur scène</p>
+        <h2 class="section__title reveal">Les <em>artistes</em></h2>
+
+        <div class="artistes__grid">
+          <!-- Pour ajouter une image plus tard : décommenter la balise <img> dans la carte -->
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="M">
+              <!-- <img src="assets/artiste-madii.jpg" alt="MADII MADII"> -->
+            </div>
+            <h3 class="artist-card__name">Madii Madii</h3>
+            <p class="artist-card__role">Showcase live</p>
+          </article>
+
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="L"></div>
+            <h3 class="artist-card__name">Léa Churros</h3>
+            <p class="artist-card__role">Showcase live</p>
+          </article>
+
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="A"></div>
+            <h3 class="artist-card__name">Anthony Gussie</h3>
+            <p class="artist-card__role">de Black Affairs</p>
+          </article>
+
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="S"></div>
+            <h3 class="artist-card__name">Speaker</h3>
+            <p class="artist-card__role">Maître de cérémonie</p>
+          </article>
+
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="P"></div>
+            <h3 class="artist-card__name">Deejay Patrice</h3>
+            <p class="artist-card__role">Aux platines</p>
+          </article>
+
+          <article class="artist-card reveal">
+            <div class="artist-card__visual" data-initial="D"></div>
+            <h3 class="artist-card__name">Dany Malli</h3>
+            <p class="artist-card__role">Aux platines</p>
+          </article>
+        </div>
+
+        <p class="artistes__crew reveal">Avec l'équipe <strong>The Connection 424</strong> by DJ BIX</p>
+      </div>
+    </section>
+
+    <!-- ===================== 5. PROGRAMME ===================== -->
+    <section class="section programme" id="programme">
+      <div class="section__inner section__inner--narrow">
+        <p class="section__eyebrow reveal">Le déroulé</p>
+        <h2 class="section__title reveal">Programme de la <em>soirée</em></h2>
+        <p class="programme__dress reveal">Tenue correcte exigée</p>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__time">18h30</span>
+            <div class="timeline__card timeline__card--major">
+              <h3>Grand lancement</h3>
+              <p>Ouverture officielle de The Soirée.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card">
+              <h3>Défilé de percussions brésiliennes</h3>
+              <p>L'énergie des tambours pour lancer la nuit.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card">
+              <h3>Arrivée des invités d'honneur</h3>
+              <p>En limousine, accueil sur tapis rouge.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card">
+              <h3>Feu d'artifice</h3>
+              <p>Le ciel de Piton Saint-Leu s'illumine.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card">
+              <h3>Dîner</h3>
+              <p>Apéritifs, entrées, plats chauds et desserts.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card timeline__card--major">
+              <h3>Showcase</h3>
+              <p>Madii Madii, Léa Churros, Anthony Gussie sur scène.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card">
+              <h3>Ambiance dansante</h3>
+              <p>Deejay Patrice &amp; Dany Malli jusqu'au bout de la nuit.</p>
+            </div>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__time">&nbsp;</span>
+            <div class="timeline__card timeline__card--surprise">
+              <h3>Enveloppes surprises</h3>
+              <p>Animation spéciale tout au long de la soirée.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== 6. MENU ===================== -->
+    <section class="section menu" id="menu">
+      <div class="section__inner section__inner--narrow">
+        <p class="section__eyebrow reveal">À table</p>
+        <h2 class="section__title reveal">Le <em>menu</em></h2>
+
+        <div class="menu__card reveal">
+          <div class="menu__corner menu__corner--tl" aria-hidden="true"></div>
+          <div class="menu__corner menu__corner--tr" aria-hidden="true"></div>
+          <div class="menu__corner menu__corner--bl" aria-hidden="true"></div>
+          <div class="menu__corner menu__corner--br" aria-hidden="true"></div>
+
+          <div class="menu__group">
+            <h3 class="menu__heading">Apéritifs</h3>
+            <ul>
+              <li>Assortiment gourmand d'amuse-bouches</li>
+            </ul>
+          </div>
+
+          <div class="menu__sep" aria-hidden="true"><span>❧</span></div>
+
+          <div class="menu__group">
+            <h3 class="menu__heading">Entrées</h3>
+            <ul>
+              <li>Porc à la créole</li>
+              <li>Rôti poulet</li>
+              <li>Farce de volaille</li>
+              <li>Achard de légumes</li>
+              <li>Duo de gratins aux saveurs variées</li>
+              <li>Pâté à l'ancienne</li>
+              <li>Salades : museau, russe, piémontaise, crudité, chinoise</li>
+            </ul>
+          </div>
+
+          <div class="menu__sep" aria-hidden="true"><span>❧</span></div>
+
+          <div class="menu__group">
+            <h3 class="menu__heading">Plats chauds</h3>
+            <ul>
+              <li>Thon massalé</li>
+              <li>Civet coq</li>
+              <li>Shop suey poulet</li>
+              <li>Porc gros piment</li>
+              <li>Riz blanc · Gros pois</li>
+              <li>Sauce citron · Rougail tomate</li>
+            </ul>
+          </div>
+
+          <div class="menu__sep" aria-hidden="true"><span>❧</span></div>
+
+          <div class="menu__group">
+            <h3 class="menu__heading">Desserts</h3>
+            <ul>
+              <li>Assortiment de pâtisseries</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. INFOS PRATIQUES ===================== -->
+    <section class="section infos" id="infos">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">À savoir</p>
+        <h2 class="section__title reveal">Infos <em>pratiques</em></h2>
+
+        <div class="infos__grid" id="printable">
+          <div class="info-card reveal">
+            <span class="info-card__label">Date</span>
+            <span class="info-card__value">Samedi 12 septembre 2026</span>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-card__label">Heure</span>
+            <span class="info-card__value">dès 18h30</span>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-card__label">Lieu</span>
+            <span class="info-card__value">Salle Foirail — Piton Saint-Leu</span>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-card__label">Dress code</span>
+            <span class="info-card__value">Tenue correcte exigée</span>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-card__label">Tarifs</span>
+            <span class="info-card__value">40&nbsp;€ adulte · 20&nbsp;€ enfant (5–12 ans)</span>
+            <span class="info-card__note">Événement complet — billets épuisés</span>
+          </div>
+          <div class="info-card reveal">
+            <span class="info-card__label">Infos &amp; réservation</span>
+            <span class="info-card__value">0692 287 081</span>
+          </div>
+        </div>
+
+        <div class="infos__actions reveal">
+          <a class="btn btn--gold" href="tel:+262692287081">Appeler maintenant</a>
+          <a class="btn btn--ghost" href="https://wa.me/262692287081" target="_blank" rel="noopener">Envoyer un WhatsApp</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Salle+du+Foirail+Piton+Saint-Leu+La+R%C3%A9union" target="_blank" rel="noopener">Ouvrir Google Maps</a>
+          <button class="btn btn--line" id="printBtn" type="button">Imprimer les infos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 8. GALERIE / VISUELS OFFICIELS ===================== -->
+    <section class="section galerie" id="galerie">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Univers officiel</p>
+        <h2 class="section__title reveal">Visuels &amp; <em>vidéos</em></h2>
+
+        <div class="galerie__grid">
+          <figure class="media-card reveal">
+            <img src="assets/affiche-the-soiree.jpg" alt="Affiche officielle THE SOIRÉE"
+                 onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+            <div class="media-card__fallback"><span>Affiche officielle</span><small>assets/affiche-the-soiree.jpg</small></div>
+            <figcaption>Affiche officielle</figcaption>
+          </figure>
+
+          <figure class="media-card reveal">
+            <img src="assets/programme-the-soiree.jpg" alt="Programme et menu de THE SOIRÉE"
+                 onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+            <div class="media-card__fallback"><span>Programme &amp; menu</span><small>assets/programme-the-soiree.jpg</small></div>
+            <figcaption>Programme &amp; menu</figcaption>
+          </figure>
+
+          <figure class="media-card media-card--video reveal">
+            <video controls preload="none" poster="assets/affiche-the-soiree.jpg"
+                   onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+              <source src="assets/video-annonce.mp4" type="video/mp4">
+            </video>
+            <div class="media-card__fallback"><span>▶ Vidéo annonce</span><small>assets/video-annonce.mp4</small></div>
+            <figcaption>Vidéo annonce</figcaption>
+          </figure>
+
+          <figure class="media-card media-card--video reveal">
+            <video controls preload="none"
+                   onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+              <source src="assets/video-teaser.mp4" type="video/mp4">
+            </video>
+            <div class="media-card__fallback"><span>▶ Teaser collage affiche</span><small>assets/video-teaser.mp4</small></div>
+            <figcaption>Teaser</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. PARTENAIRES ===================== -->
+    <section class="section partenaires" id="partenaires">
+      <div class="section__inner section__inner--narrow">
+        <p class="section__eyebrow reveal">Ils accompagnent l'événement</p>
+        <h2 class="section__title reveal">Nos <em>partenaires</em></h2>
+
+        <div class="partenaires__row reveal">
+          <div class="partner">
+            <img src="assets/logo-djbix.png" alt="Logo DJ BIX"
+                 onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+            <span class="partner__fallback">DJ BIX</span>
+          </div>
+          <div class="partner">
+            <img src="assets/logo-424.png" alt="Logo The Connection 424"
+                 onerror="this.parentElement.classList.add('is-placeholder'); this.remove();">
+            <span class="partner__fallback">The Connection 424</span>
+          </div>
+          <div class="partner is-placeholder">
+            <span class="partner__fallback">Votre logo ici</span>
+          </div>
+          <div class="partner is-placeholder">
+            <span class="partner__fallback">Votre logo ici</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10. FAQ ===================== -->
+    <section class="section faq" id="faq">
+      <div class="section__inner section__inner--narrow">
+        <p class="section__eyebrow reveal">Questions fréquentes</p>
+        <h2 class="section__title reveal">F.A.Q.</h2>
+
+        <div class="faq__list">
+          <details class="faq__item reveal">
+            <summary>Les billets sont-ils encore disponibles ?</summary>
+            <p>L'événement affiche complet.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>À quelle heure faut-il arriver ?</summary>
+            <p>Dès 18h30 pour ne pas manquer le grand lancement.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Où se déroule l'événement ?</summary>
+            <p>Salle Foirail — Piton Saint-Leu.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Quelle tenue prévoir ?</summary>
+            <p>Tenue correcte exigée.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary>Y aura-t-il un repas ?</summary>
+            <p>Oui, dîner avec apéritifs, entrées, plats chauds et desserts.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== 11. FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__script">The Soirée</p>
+      <p class="footer__line">DJ BIX · The Connection 424</p>
+      <p class="footer__line">Infos : <a href="tel:+262692287081">0692 287 081</a></p>
+      <p class="footer__mention">Une direction artistique inspirée de l'univers officiel de l'événement.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== STICKY MOBILE + RETOUR HAUT ===================== -->
+  <a class="sticky-cta" href="tel:+262692287081">Infos &amp; réservation · 0692 287 081</a>
+  <button class="to-top" id="toTop" type="button" aria-label="Retour en haut de page">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
